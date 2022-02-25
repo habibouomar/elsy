@@ -9,9 +9,10 @@ export class Box extends React.Component {
                 </span>
                 <p>{this.props.value} {this.props.unit}</p>
 
-                { this.props.icon != "local_drink" ? <input type="range"></input>:null }
+                { this.props.icon !== "local_drink" ? <input type="range" min={this.props.min} max={this.props.max} value={this.props.value} onInput={this.props.onChange} ></input>:null }
 
             </div>
         );
     }
 }
+
